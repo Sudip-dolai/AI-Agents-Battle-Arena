@@ -1,0 +1,39 @@
+
+=== EXPERIMENT 1: search depth (NEXUS/H1 depth d vs fixed TITAN/H2 reference) ===
+Ref Depth    W-D-L     Nodes    Pruned  Time(s)  Opening nodes (AB)   (no AB)
+  3     1   0-10-0       225         0   0.0827                   9         9
+  3     2   0-10-0      1425         0   0.0918                  81        81
+  3     3   0-10-0      4596      2929   0.1108                 308       585
+  3     4   0-10-0     16347      6415   0.1924                1315      3609
+  1     1    6-4-0       218         0   0.0079                   9         9
+  1     2    4-6-0      1397         0    0.017                  81        81
+  1     3    4-6-0      4691      2866   0.0376                 308       585
+  1     4    9-1-0     16570      6444   0.1233                1315      3609
+saved -> results/depth_results.csv
+
+=== EXPERIMENT 2: NEXUS(depth=3, H1) vs TITAN(depth=3, H2) ===
+Game  First Winner Moves NEXUS nodes TITAN nodes  Time(s)
+   1  NEXUS   DRAW     9         544         367     0.01
+   2  TITAN   DRAW     9         364         558   0.0123
+   3  NEXUS   DRAW     9         579         393   0.0107
+   4  TITAN   DRAW     9         358         544   0.0125
+   5  NEXUS   DRAW     9         545         358   0.0096
+   6  TITAN   DRAW     9         370         557   0.0128
+   7  NEXUS   DRAW     9         544         367   0.0097
+   8  TITAN   DRAW     9         378         565   0.0125
+   9  NEXUS   DRAW     9         544         367   0.0106
+  10  TITAN   DRAW     9         370         557   0.0125
+
+--- Summary (computed from results/results.csv ) ---
+games: 10
+wins: {'NEXUS': 0, 'TITAN': 0}
+draws: 10
+wins_by_first_mover: 0
+wins_by_second_mover: 0
+avg_nexus_nodes: 459.6
+avg_titan_nodes: 463.3
+avg_nexus_pruned: 292.9
+avg_titan_pruned: 289.2
+avg_moves: 9.0
+avg_time_sec: 0.011
+total_time_sec: 0.113
